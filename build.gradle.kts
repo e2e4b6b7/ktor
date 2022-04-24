@@ -183,6 +183,10 @@ allprojects {
     dependencies {
         dokkaPlugin("org.jetbrains.dokka:versioning-plugin:1.6.10")
     }
+
+    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+        kotlinOptions.useFir = true
+    }
 }
 
 val dokkaOutputDir = "../versions"
